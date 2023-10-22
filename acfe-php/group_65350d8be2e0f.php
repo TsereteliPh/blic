@@ -114,7 +114,7 @@ acf_add_local_field_group(array(
 		4 => 'the_content',
 		5 => 'slug',
 	),
-	'active' => true,
+	'active' => false,
 	'description' => '',
 	'show_in_rest' => 0,
 	'acfe_autosync' => array(
@@ -124,7 +124,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1697975874,
+	'modified' => 1697979484,
 ));
 
 endif;

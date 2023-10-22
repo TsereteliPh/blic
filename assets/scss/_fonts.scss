@@ -1,9 +1,43 @@
 @font-face {
-	font-weight: 300;
-	font-family: "Cormorant Unicase";
+	font-weight: 400;
+	font-family: Poppins;
 	font-style: normal;
 	src:
-		url(assets/fonts/CormorantUnicase-Light.woff2) format("woff2"),
-		url(assets/fonts/CormorantUnicase-Light.woff) format("woff");
+		url(assets/fonts/Poppins-Regular.woff2) format("woff2"),
+		url(assets/fonts/Poppins-Regular.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: Poppins;
+	font-style: normal;
+	src:
+		url(assets/fonts/Poppins-Medium.woff2) format("woff2"),
+		url(assets/fonts/Poppins-Medium.woff) format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: Outfit;
+	font-style: normal;
+	src: url(assets/fonts/Outfit-Regular.ttf) format("truetype");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: Outfit;
+	font-style: normal;
+	src: url(assets/fonts/Outfit-Medium.ttf) format("truetype");
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: 500;
+	font-family: Outfit;
+	font-style: normal;
+	src: url(assets/fonts/Outfit-SemiBold.ttf) format("truetype");
 	font-display: swap;
 }

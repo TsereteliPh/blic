@@ -1,16 +1,21 @@
 :root {
 	// FONTS
-	--font-primary: "Manrope", "Arial", sans-serif;
-	--font-secondary: "FiraSans", "Arial", sans-serif;
+	--font-primary: "Poppins", "Arial", sans-serif;
+	--font-secondary: "Outfit", "Arial", sans-serif;
 
 	//COLORS
-	--primary: #1e5fbf;
-	--secondary: #ffb342;
+	--primary: #002951;
+	--primary-rgb: rgb(0, 41, 81);
+	--secondary: #497bab;
+	--secondary-rgb: rgb(73, 123, 171);
 
-	--fc-dark: #4b4b4b;
-	--fc-light: #fff;
+	--fc-dark: #353535;
+	--fc-dark-rgb: rgb(53, 53, 53);
+	--fc-light: #93adc6;
+	--fc-light-rgb: rgb(147, 173, 198);
 
-	--bg-primary: #c9e1f5;
+	--bg-primary: #f9fcff;
+	--bg-primary-rgb: rgb(249, 252, 255);
 
 	//Transition
 	--transition: all 0.3s ease;
