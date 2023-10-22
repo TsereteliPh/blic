@@ -2,9 +2,16 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: var(--ui-index-3);
 	width: 100%;
 	min-height: 70px;
 	padding-top: 25px;
+	transition: var(--transition);
+
+	&.active {
+		background-color: var(--bg-primary);
+		box-shadow: 0 5px 20px rgba(#000, 0.7);
+	}
 
 	&__content {
 		display: flex;
@@ -28,6 +35,10 @@
 		gap: 45px;
 		align-items: center;
 		margin-left: auto;
+
+		@include sm {
+			display: none;
+		}
 
 		.menu-item {
 
@@ -69,6 +80,10 @@
 		border: none;
 		transition: var(--transition);
 
+		@include sm {
+			margin-left: auto;
+		}
+
 		@media (hover: hover) {
 
 			&:hover {
@@ -81,7 +96,129 @@
 		}
 	}
 
+	&__phone {
+
+		@include sm {
+			display: none;
+		}
+	}
+
+	&__burger {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		padding: 0;
+		overflow: hidden;
+		background: #dce5ee;
+		border: none;
+		border-radius: 50%;
+
+		@include sm {
+			display: flex;
+		}
+
+		&.active {
+
+			span {
+				background: transparent;
+
+				&::before {
+					top: 0;
+					transform: rotateZ(-45deg);
+					transition: top 0.25s, transform 0.25s 0.25s;
+				}
+
+				&::after {
+					top: 0;
+					width: 100%;
+					transform: rotateZ(45deg);
+					transition: top 0.4s, transform 0.25s 0.25s;
+				}
+			}
+		}
+
+		span {
+			position: relative;
+			display: block;
+			width: 18px;
+			height: 1.5px;
+			background-color: var(--primary);
+			border-radius: 1.5px;
+			transition: background 0.2s ease;
+			pointer-events: none;
+
+			&::before,
+			&::after {
+				position: absolute;
+				right: 0;
+				height: 1.5px;
+				background-color: var(--primary);
+				content: "";
+			}
+
+			&::before {
+				top: -5px;
+				width: 100%;
+				transition: transform 0.25s, top 0.25s 0.25s;
+				transition-duration: 0.25s;
+			}
+
+			&::after {
+				top: 5px;
+				width: 100%;
+				transition: width 0.25s, transform 0.25s, top 0.25s .25s;
+				transition-duration: 0.25s;
+			}
+		}
+	}
+
 	&__drop {
 		display: none;
+		max-height: 0;
+		overflow: hidden;
+		transition: var(--transition);
+
+		@include sm {
+			display: block;
+		}
+	}
+
+	&__drop-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		margin: 25px 0;
+
+		.menu-item {
+
+			> a {
+				color: var(--primary);
+				font-size: 20px;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: var(--transition);
+
+				&:active {
+					color: var(--secondary);
+				}
+			}
+		}
+	}
+
+	&__drop-contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		margin: 25px 0;
+		padding-top: 140px;
+		border-top: 1px solid var(--secondary);
+
+		a {
+			width: 100%;
+			font-size: 20px;
+			text-decoration: none;
+		}
 	}
 }

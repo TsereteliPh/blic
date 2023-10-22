@@ -1,0 +1,105 @@
+<?php 
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_6535311fa1e65',
+	'title' => 'Первый экран',
+	'fields' => array(
+		array(
+			'key' => 'field_65353120fba4f',
+			'label' => '',
+			'name' => 'welcome',
+			'aria-label' => '',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'layout' => 'block',
+			'acfe_seamless_style' => 0,
+			'acfe_group_modal' => 0,
+			'acfe_field_group_condition' => 0,
+			'sub_fields' => array(
+				array(
+					'key' => 'field_65353133fba50',
+					'label' => 'Заголовок',
+					'name' => 'title',
+					'aria-label' => '',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '40',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'maxlength' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'acfe_field_group_condition' => 0,
+				),
+				array(
+					'key' => 'field_65353150fba51',
+					'label' => 'Текст',
+					'name' => 'text',
+					'aria-label' => '',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '60',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'acfe_textarea_code' => 0,
+					'maxlength' => '',
+					'rows' => 5,
+					'placeholder' => '',
+					'new_lines' => '',
+					'acfe_field_group_condition' => 0,
+				),
+			),
+			'acfe_group_modal_close' => 0,
+			'acfe_group_modal_button' => '',
+			'acfe_group_modal_size' => 'large',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'front_page',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+	'show_in_rest' => 0,
+	'acfe_autosync' => array(
+		0 => 'php',
+	),
+	'acfe_form' => 0,
+	'acfe_display_title' => '',
+	'acfe_meta' => '',
+	'acfe_note' => '',
+	'modified' => 1697984946,
+));
+
+endif;

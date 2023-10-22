@@ -19,10 +19,6 @@ function get_siblings(elem) {
 	return siblings;
 }
 
-function slideDown(elem) {
-	elem.style.maxHeight = `${elem.scrollHeight}px`;
-}
-
 function slideToggle(elem) {
 	if (elem.offsetHeight === 0) {
 		elem.style.maxHeight = `${elem.scrollHeight}px`;
@@ -289,44 +285,33 @@ if (restCarousel) {
 
 // Функционал шапки сайта
 
-// document.addEventListener("DOMContentLoaded", function(e) {
-// 	const header = document.querySelector('.header');
-// 	const drop = document.querySelector('.drop');
+document.addEventListener("DOMContentLoaded", function(e) {
+	const header = document.querySelector('.header');
 
-// 	if (header) {
-// 		const headerBurger = header.querySelectorAll('.header__burger');
-// 		const headerClose = drop.querySelector('.drop__close');
+	if (header) {
+		const headerBurger = header.querySelector('.header__burger');
+		const headerDrop = header.querySelector('.header__drop');
 
-// 		const dropOpener = () => {
-// 			if (!drop.classList.contains('active')) {
-// 				drop.classList.add('active');
-// 			} else {
-// 				return
-// 			}
-// 		}
+		const dropOpener = () => {
+			header.classList.add('active');
+			headerBurger.classList.add('active');
+			headerDrop.style.maxHeight = headerDrop.scrollHeight + "px";
+			document.body.style.overflow = 'hidden';
+		}
 
-// 		const dropCloser = () => {
-// 			if (drop.classList.contains('active')) {
-// 				drop.classList.remove('active');
-// 			} else {
-// 				return
-// 			}
-// 		}
+		const dropCloser = () => {
+			header.classList.remove('active');
+			headerBurger.classList.remove('active');
+			headerDrop.style.maxHeight = 0;
+			document.body.style.overflow = 'visible';
+		}
 
-// 		headerBurger.forEach(burger => {
-// 			burger.onclick = () => {
-// 				dropOpener();
-// 			}
-// 		});
-
-// 		headerClose.onclick = () => {
-// 			dropCloser();
-// 		}
-
-// 		drop.addEventListener('mouseup', (e) => {
-// 			if (drop === e.target) {
-// 				dropCloser();
-// 			}
-// 		});
-// 	}
-// })
+		headerBurger.addEventListener('click', function() {
+			if (this.classList.contains('active')) {
+				dropCloser();
+			} else {
+				dropOpener();
+			}
+		})
+	}
+})
