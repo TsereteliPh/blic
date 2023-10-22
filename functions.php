@@ -28,6 +28,7 @@ if (!function_exists('tsereteli_setup')) {
 		register_nav_menus(
 			array(
 				'menu_main' => 'Основное меню',
+				'menu_footer' => 'Меню футера',
 			)
 		);
 	}
