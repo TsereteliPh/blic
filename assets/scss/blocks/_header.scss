@@ -97,6 +97,15 @@
 	}
 
 	&__phone {
+		transition: var(--transition);
+
+		@media (hover: hover) {
+
+			&:hover {
+				transform: translateY(-3px);
+
+			}
+		}
 
 		@include sm {
 			display: none;
