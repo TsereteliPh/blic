@@ -1,12 +1,12 @@
 .services-links {
-	margin: 95px 0;
+	margin-top: 95px;
 
 	@include md {
-		margin: 75px 0;
+		margin-top: 75px;
 	}
 
 	@include xs {
-		margin: 60px 0;
+		margin-top: 60px;
 	}
 
 	&__title {

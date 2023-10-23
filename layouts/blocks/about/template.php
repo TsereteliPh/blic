@@ -15,7 +15,7 @@
 			<div class="about__text"><?php the_sub_field( 'text' ); ?></div>
 
 			<?php if ( get_sub_field( 'link' ) ) : ?>
-				<a href="<?php the_sub_field( 'link' ); ?>" class="btn-read-more about__link">
+				<a href="<?php the_sub_field( 'link' ); ?>" class="btn about__link">
 					Read more
 					<svg width="17" height="17"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
 				</a>

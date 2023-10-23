@@ -1,0 +1,171 @@
+.footer {
+	margin: 95px 0 24px;
+
+	@include md {
+		margin: 75px 0 24px;
+	}
+
+	@include xs {
+		margin: 60px 0 24px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+
+		@include sm {
+			gap: 36px;
+		}
+
+		@include xs {
+			gap: 24px;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 185px 1fr;
+		gap: 140px;
+		padding-top: 48px;
+		border-top: 1px solid var(--secondary);
+
+		@include md {
+			display: flex;
+			flex-direction: column;
+			gap: 48px;
+		}
+
+		@include sm {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 36px 0;
+			padding-top: 36px;
+		}
+
+		@include xs {
+			gap: 24px 0;
+			padding-top: 24px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		width: 100%;
+		max-width: 185px;
+		height: auto;
+		aspect-ratio: 186/89;
+		background: url(assets/images/logo-main.png) no-repeat 50% / cover;
+		cursor: pointer;
+
+		@include xs {
+			width: 86px;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+
+		@include sm {
+			grid-row: 1/2;
+			grid-column: span 2;
+		}
+
+		@include xs {
+			align-items: center;
+		}
+
+		.menu-item {
+
+			> a {
+				display: block;
+				font-weight: 500;
+				font-size: 14px;
+				text-transform: uppercase;
+				@include ui-link(var(--primary));
+
+				@include xs {
+					font-size: 10px;
+				}
+			}
+
+			.sub-menu {
+				margin: 20px 0 0;
+				padding: 0;
+				list-style: none;
+
+				@include sm {
+					display: none;
+				}
+
+				.menu-item {
+					margin-top: 14px;
+
+					> a {
+						text-transform: none;
+						@include ui-link(var(--fc-dark));
+					}
+				}
+
+			}
+		}
+	}
+
+	&__contacts {
+		display: none;
+		flex-direction: column;
+		gap: 10px;
+		align-self: center;
+
+		@include sm {
+			display: flex;
+		}
+
+		a {
+			text-align: right;
+			text-decoration: none;
+
+			@include xs {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		gap: 14px 28px;
+		justify-content: space-between;
+		padding-top: 24px;
+		font-size: 14px;
+		border-top: 1px solid var(--secondary);
+
+		@include md {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		@include xs {
+			gap: 7px 28px;
+			font-size: 8px;
+		}
+	}
+
+	&__copyright {
+
+		@include md {
+			order: 1;
+		}
+	}
+
+	&__terms,
+	&__policy {
+		@include ui-link(var(--secondary));
+	}
+
+	&__copyright,
+	&__designer {
+		color: var(--secondary);
+	}
+}

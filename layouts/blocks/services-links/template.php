@@ -11,7 +11,7 @@
 		?>
 			<div class="services-links__links">
 				<?php foreach ( $links as $link ) : ?>
-					<a href="<?php echo esc_html( $link['link']['url'] ); ?>" class="btn-read-more services-links__link" target="<?php echo $link['link']['target']; ?>">
+					<a href="<?php echo esc_html( $link['link']['url'] ); ?>" class="btn services-links__link" target="<?php echo $link['link']['target']; ?>">
 						<?php echo $link['link']['title']; ?>
 						<svg width="24" height="26"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
 					</a>
