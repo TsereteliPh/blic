@@ -97,6 +97,7 @@
 	}
 
 	&__phone {
+		color: var(--primary);
 		transition: var(--transition);
 
 		@media (hover: hover) {

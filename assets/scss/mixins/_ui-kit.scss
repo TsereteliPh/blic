@@ -1,0 +1,15 @@
+@mixin ui-link($color) {
+	color: $color;
+	text-decoration: none;
+	transition: all 0.2s ease;
+
+	&:hover {
+		@media (hover: hover) {
+			text-decoration: underline;
+		}
+	}
+
+	&:active {
+		color: var(--secondary);
+	}
+}
