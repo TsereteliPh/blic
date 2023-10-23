@@ -33,7 +33,7 @@
 
 			<?php if ( $tel ) : ?>
 				<a href="tel:<?php echo $telFormatted; ?>" class="header__phone">
-					<svg width="14" height="14"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
+					<svg width="18" height="18"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
 				</a>
 			<?php endif; ?>
 

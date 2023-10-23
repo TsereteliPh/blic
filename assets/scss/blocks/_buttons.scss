@@ -22,6 +22,7 @@
 	}
 
 	svg {
+		flex-shrink: 0;
 		color: var(--secondary);
 		transform: rotate(-45deg);
 		transition: var(--transition);
