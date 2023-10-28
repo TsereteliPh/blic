@@ -28,6 +28,12 @@
 	}
 }
 
+@mixin xxs {
+	@media screen and (max-width: 400px) {
+		@content;
+	}
+}
+
 @mixin from($min_width) {
 	@media screen and (min-width: $min_width) {
 		@content;

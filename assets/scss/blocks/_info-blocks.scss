@@ -1,0 +1,83 @@
+.info-blocks {
+	margin-top: 95px;
+
+	@include md {
+		margin-top: 75px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: 295px 1fr;
+		gap: 30px;
+
+		@include lg {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 72px 30px;
+
+		@include lg {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		@include md {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 60px 30px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+		}
+
+		@include xxs {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item-title {
+		font-size: 25px;
+
+		@include md {
+			font-size: 22px;
+		}
+
+		@include xs {
+			font-size: 20px;
+		}
+	}
+
+	&__item-text {
+		margin-top: 18px;
+		padding-top: 24px;
+		line-height: 1.5;
+		border-top: 1px solid var(--secondary);
+
+		@include xs {
+			margin-top: 12px;
+			padding-top: 12px;
+		}
+	}
+
+	&__item-link {
+		margin-top: 26px;
+
+		@include xs {
+			margin-top: 20px;
+		}
+	}
+}
