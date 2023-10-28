@@ -17,7 +17,7 @@
 	$email = get_field( 'email', 'options' );
 ?>
 
-<header class="header">
+<header class="header<?php echo ( is_front_page() ) ? ' header--index' : ''; ?>">
 	<div class="container">
 		<div class="header__content">
 			<a href="<?php echo bloginfo( 'url' ); ?>" class="header__logo" aria-label="Blic staffing logo"></a>
@@ -66,4 +66,4 @@
 </header>
 
 <main class="main<?php echo ( is_front_page() ) ? ' main--index' : ''; ?>">
-	<?php if ( is_front_page() ) get_template_part( 'layouts/partials/welcome' ); ?>
+	<?php get_template_part( 'layouts/partials/welcome' ); ?>

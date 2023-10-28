@@ -8,6 +8,31 @@
 	padding-top: 25px;
 	transition: var(--transition);
 
+	&--index {
+
+		.header__logo {
+			background-image: url(assets/images/logo-main.png);
+		}
+
+		.header__menu {
+
+			.menu-item {
+
+				> a {
+					color: var(--primary);
+				}
+			}
+		}
+
+		.header__language {
+			color: var(--primary);
+		}
+
+		.header__phone {
+			color: var(--primary);
+		}
+	}
+
 	&.active {
 		background-color: var(--bg-primary);
 		box-shadow: 0 5px 20px rgba(#000, 0.7);
@@ -26,7 +51,7 @@
 		width: 78px;
 		height: auto;
 		aspect-ratio: 186/89;
-		background: url(assets/images/logo-main.png) no-repeat 50% / cover;
+		background: url(assets/images/logo-main--white.png) no-repeat 50% / cover;
 		cursor: pointer;
 	}
 
@@ -46,7 +71,7 @@
 				display: block;
 				width: 100%;
 				height: 100%;
-				color: var(--primary);
+				color: var(--fc-light);
 				text-transform: uppercase;
 				text-decoration: none;
 				transition: var(--transition);
@@ -74,7 +99,7 @@
 
 	&__language {
 		margin-left: 120px;
-		color: var(--primary);
+		color: var(--fc-light);
 		text-transform: uppercase;
 		background: transparent;
 		border: none;
@@ -97,7 +122,7 @@
 	}
 
 	&__phone {
-		color: var(--primary);
+		color: var(--fc-light);
 		transition: var(--transition);
 
 		@include mouse {
