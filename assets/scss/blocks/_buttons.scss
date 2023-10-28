@@ -10,7 +10,7 @@
 	-webkit-tap-highlight-color: transparent;
 	@include ui-link(var(--primary));
 
-	@media (hover: hover) {
+	@include mouse {
 
 		&:hover {
 

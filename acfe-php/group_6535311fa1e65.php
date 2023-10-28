@@ -68,6 +68,34 @@ acf_add_local_field_group(array(
 					'new_lines' => '',
 					'acfe_field_group_condition' => 0,
 				),
+				array(
+					'key' => 'field_653c0777bd3e3',
+					'label' => 'Фоновое изображение',
+					'name' => 'img',
+					'aria-label' => '',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'uploader' => '',
+					'acfe_thumbnail' => 0,
+					'return_format' => 'url',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+					'preview_size' => 'medium',
+					'acfe_field_group_condition' => 0,
+					'library' => 'all',
+				),
 			),
 			'acfe_group_modal_close' => 0,
 			'acfe_group_modal_button' => '',
@@ -77,9 +105,9 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'page_type',
+				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'front_page',
+				'value' => 'page',
 			),
 		),
 	),
@@ -99,7 +127,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1697984946,
+	'modified' => 1698434322,
 ));
 
 endif;

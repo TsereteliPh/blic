@@ -9,15 +9,15 @@
 		margin-top: 60px;
 	}
 
-	&__title {
-		margin: 0;
-	}
-
 	&__links {
 		display: flex;
 		flex-direction: column;
 		margin-top: 50px;
 		counter-reset: services-links-number 0;
+
+		@include sm {
+			margin-top: 24px;
+		}
 	}
 
 	&__link {
@@ -46,7 +46,7 @@
 			font-size: 15px;
 		}
 
-		@media (hover: hover) {
+		@include mouse {
 
 			&:hover {
 				transform: translateX(5px);

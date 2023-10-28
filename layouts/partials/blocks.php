@@ -15,5 +15,6 @@ if (have_rows('blocks', $id)) {
 
 		if (get_row_layout() == 'about') get_template_part('layouts/blocks/about/template');
 		else if (get_row_layout() == 'services-links') get_template_part('layouts/blocks/services-links/template');
+		else if (get_row_layout() == 'staffing-map') get_template_part('layouts/blocks/staffing-map/template');
 	}
 }
