@@ -16,8 +16,6 @@
 							<h2 class="title info-blocks__item-title"><?php echo $item['title']; ?></h2>
 						<?php endif; ?>
 
-						<div class="info-blocks__item-separator"></div>
-
 						<?php if ( $item['text'] ) : ?>
 							<div class="info-blocks__item-text"><?php echo $item['text']; ?></div>
 						<?php endif; ?>
