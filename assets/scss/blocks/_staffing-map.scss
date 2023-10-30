@@ -132,14 +132,6 @@
 		flex-direction: column;
 	}
 
-	&__current {
-
-		@include xs {
-			flex-direction: row;
-			gap: 25px;
-		}
-	}
-
 	&__current-numbers,
 	&__specialties-text,
 	&__planned-wrapper {
@@ -159,13 +151,15 @@
 		align-items: center;
 
 		@include xs {
-			flex-direction: column;
 			gap: 14px;
-			align-items: flex-start;
-			max-width: 150px;
-			margin-top: -15px;
 			padding: 0;
 			border: none;
+		}
+
+		.staffing-map__number {
+			@include xs {
+				font-size: 70px;
+			}
 		}
 
 		span {

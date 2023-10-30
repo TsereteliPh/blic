@@ -35,12 +35,8 @@
 		}
 
 		@include xs {
-			grid-template-columns: 1fr 1fr;
-			gap: 30px;
-		}
-
-		@include xxs {
 			grid-template-columns: 1fr;
+			gap: 30px;
 		}
 	}
 

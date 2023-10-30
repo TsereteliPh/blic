@@ -48,19 +48,21 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: 18px;
-			height: 18px;
-			background: var(--secondary);
-			border-radius: 1px;
-			transform: translate(-50%, -50%) scale(0);
+			width: 14px;
+			height: 7px;
+			border-bottom: 2px solid var(--secondary);
+			border-left: 2px solid var(--secondary);
+			transform: translate(-50%, -40%) rotate(-45deg);
 			visibility: hidden;
+			opacity: 0;
 			transition: var(--transition);
 			content: "";
 		}
 	}
 
 	&__input:checked + &__switcher::before {
-		transform: translate(-50%, -50%) scale(1);
+		transform: translate(-50%, -60%) rotate(-45deg);
 		visibility: visible;
+		opacity: 1;
 	}
 }
