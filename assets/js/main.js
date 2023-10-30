@@ -315,3 +315,30 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		})
 	}
 })
+
+//Функционал блока .accordion
+
+const accordion = document.querySelector('.accordion');
+
+if (accordion) {
+	const accordionBtns = accordion.querySelectorAll('.accordion__button');
+
+	const accordionBtnsClose = () => {
+		for (let btn of accordionBtns) {
+			btn.classList.remove('active');
+			btn.nextElementSibling.style.maxHeight = 0;
+		}
+	}
+
+	accordionBtns.forEach(btn => {
+		btn.addEventListener('click', function() {
+			if (this.classList.contains('active')) {
+				accordionBtnsClose();
+			} else {
+				accordionBtnsClose();
+				this.classList.add('active');
+				slideToggle(this.nextElementSibling);
+			}
+		})
+	});
+}

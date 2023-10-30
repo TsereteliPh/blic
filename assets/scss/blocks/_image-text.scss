@@ -79,6 +79,7 @@
 	&__text {
 		align-self: end;
 		font-style: italic;
+		line-height: 1.5;
 
 		@include xxs {
 			font-size: 14px;
