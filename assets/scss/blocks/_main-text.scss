@@ -1,0 +1,20 @@
+.main-text {
+	margin-top: 95px;
+
+	@include md {
+		margin-top: 75px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__text {
+		margin-top: 35px;
+
+		@include xs {
+			margin-top: 20px;
+			font-size: 14px;
+		}
+	}
+}

@@ -17,7 +17,7 @@
 	$email = get_field( 'email', 'options' );
 ?>
 
-<header class="header<?php echo ( is_front_page() ) ? ' header--index' : ''; ?>">
+<header class="header<?php echo ( is_front_page() || is_privacy_policy() || is_page( 66 ) ) ? ' header--index' : ''; ?>">
 	<div class="container">
 		<div class="header__content">
 			<a href="<?php echo bloginfo( 'url' ); ?>" class="header__logo" aria-label="Blic staffing logo"></a>

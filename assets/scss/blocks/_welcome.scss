@@ -1,6 +1,7 @@
 .welcome {
 	position: relative;
 	min-height: 100vh;
+	margin-top: -40px;
 	background: url(assets/images/welcome-bg.jpg) no-repeat 50% top / cover;
 
 	@include sm {
