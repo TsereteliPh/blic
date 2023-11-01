@@ -1,0 +1,59 @@
+.list-of-items {
+	margin-top: 95px;
+
+	@include md {
+		margin-top: 75px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: 295px 1fr;
+		gap: 30px;
+
+		@include md {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__text {
+		margin-top: 42px;
+		line-height: 1.5;
+
+		@include md {
+			max-width: 400px;
+			margin-top: 25px;
+		}
+
+		@include xs {
+			margin-top: 15px;
+			font-size: 14px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		padding: 24px 0;
+		color: var(--primary);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+		border-top: 1px solid var(--secondary);
+
+		@include xs {
+			padding: 14px 0;
+			font-size: 15px;
+		}
+
+		&:last-child {
+			border-bottom: 1px solid var(--secondary);
+		}
+	}
+}
