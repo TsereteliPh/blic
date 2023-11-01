@@ -35,7 +35,7 @@
 		<div class="footer__links">
 			<div class="footer__copyright">© 2023 BLIC STAFFING Renewable Energy. All rights reserved</div>
 
-			<a href="<?php echo get_page_link( 66 ); ?>" class="footer__terms">Terms&nbsp;of&nbsp;service</a>
+			<a href="<?php echo get_page_link( 66 ); ?>" class="footer__terms">Terms&nbsp;of&nbsp;use</a>
 
 			<a href="<?php echo get_privacy_policy_url(); ?>" class="footer__policy">Privacy&nbsp;Policy</a>
 
