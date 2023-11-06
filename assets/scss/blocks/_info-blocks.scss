@@ -20,6 +20,21 @@
 		}
 	}
 
+	&__text {
+		margin-top: 42px;
+		line-height: 1.5;
+
+		@include md {
+			max-width: 400px;
+			margin-top: 25px;
+		}
+
+		@include xs {
+			margin-top: 15px;
+			font-size: 14px;
+		}
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

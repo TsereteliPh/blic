@@ -1,11 +1,20 @@
 <section class="info-blocks">
 	<div class="container info-blocks__container">
-		<?php
-			get_template_part('/layouts/partials/title', null, array(
-				'class' => 'info-blocks__title',
-				'title' => get_sub_field('title')
-			));
+		<div class="info-blocks__title-wrapper">
+			<?php
+				get_template_part('/layouts/partials/title', null, array(
+					'class' => 'info-blocks__title',
+					'title' => get_sub_field('title')
+				));
 
+				$text = get_sub_field( 'text' );
+				if ( $text ) :
+			?>
+				<div class="info-blocks__text"><?php echo $text; ?></div>
+			<?php endif; ?>
+		</div>
+
+		<?php
 			$infoBlocks = get_sub_field( 'info_blocks' );
 			if ( $infoBlocks ) :
 		?>

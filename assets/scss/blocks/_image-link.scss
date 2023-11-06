@@ -1,0 +1,78 @@
+.image-link {
+	margin-top: 95px;
+
+	@include md {
+		margin-top: 75px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__title {
+		margin-bottom: 42px;
+
+		@include md {
+			margin-bottom: 25px;
+		}
+
+		@include xs {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: minmax(250px, auto);
+		gap: 30px;
+
+		@include md {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__text {
+		line-height: 1.5;
+
+		@include xs {
+			font-size: 14px;
+		}
+	}
+
+	&__link {
+		margin-top: 32px;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(50% - 15px);
+		height: 100%;
+		min-height: 250px;
+
+		@include md {
+			display: none;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(#fff, 0) 0%, rgba(var(--primary-rgb), 0.4) 100%) no-repeat;
+			content: "";
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
