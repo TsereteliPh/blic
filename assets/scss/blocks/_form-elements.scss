@@ -27,6 +27,16 @@
 	color: var(--secondary);
 	font-size: 12px;
 
+	@include mouse {
+
+		&:hover {
+
+			.policy-check__switcher {
+				border-color: var(--primary);
+			}
+		}
+	}
+
 	a {
 		color: var(--primary);
 	}
@@ -43,6 +53,7 @@
 		height: 24px;
 		border: 1px solid var(--secondary);
 		border-radius: 1px;
+		transition: var(--transition);
 
 		&::before {
 			position: absolute;
@@ -50,14 +61,18 @@
 			left: 50%;
 			width: 14px;
 			height: 7px;
-			border-bottom: 2px solid var(--secondary);
-			border-left: 2px solid var(--secondary);
+			border-bottom: 2px solid var(--primary);
+			border-left: 2px solid var(--primary);
 			transform: translate(-50%, -40%) rotate(-45deg);
 			visibility: hidden;
 			opacity: 0;
 			transition: var(--transition);
 			content: "";
 		}
+	}
+
+	&__input:checked + &__switcher {
+		border-color: var(--primary);
 	}
 
 	&__input:checked + &__switcher::before {
