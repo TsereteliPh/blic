@@ -318,7 +318,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 //Функционал блока .accordion
 
-const accordion = document.querySelector('.accordion');
+let accordion = document.querySelector('.accordion');
+
+if (accordion.classList.contains('accordion--full-size') && window.innerWidth >= 992) {
+	accordion = false;
+}
 
 if (accordion) {
 	const accordionBtns = accordion.querySelectorAll('.accordion__button');

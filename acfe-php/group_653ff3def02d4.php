@@ -86,6 +86,28 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
+			'key' => 'field_654d29f2350f4',
+			'label' => 'Полноразмерные пункты для ПК и ноутбуков',
+			'name' => 'full',
+			'aria-label' => '',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+			'ui' => 1,
+			'acfe_field_group_condition' => 0,
+			'style' => '',
+		),
+		array(
 			'key' => 'field_653ff400c18e6',
 			'label' => 'Аккордеон',
 			'name' => 'accordion',
@@ -182,7 +204,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1698690336,
+	'modified' => 1699555919,
 ));
 
 endif;

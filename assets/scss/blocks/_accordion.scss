@@ -9,6 +9,65 @@
 		margin-top: 60px;
 	}
 
+	&--full-size {
+
+		.accordion__container {
+			display: flex;
+			flex-direction: column;
+			gap: 48px;
+
+			@include md {
+				gap: 36px;
+			}
+
+			@include xs {
+				gap: 24px;
+			}
+		}
+
+		.accordion__item {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+			padding: 24px 0;
+
+			@include md {
+				grid-template-columns: 1fr 2fr;
+			}
+
+			@include sm {
+				display: block;
+				padding: 0;
+			}
+		}
+
+		.accordion__button {
+			align-items: flex-start;
+			padding: 0;
+
+			@include sm {
+				align-items: center;
+				padding: 24px 0;
+			}
+
+			span {
+				display: none;
+
+				@include sm {
+					display: block;
+				}
+			}
+		}
+
+		.accordion__text {
+			max-height: none;
+
+			@include sm {
+				max-height: 0;
+			}
+		}
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: 295px 1fr;
