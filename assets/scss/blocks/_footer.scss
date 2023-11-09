@@ -12,40 +12,20 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		gap: 48px;
-
-		@include sm {
-			gap: 36px;
-		}
-
-		@include xs {
-			gap: 24px;
-		}
 	}
 
 	&__wrapper {
-		display: grid;
-		grid-template-columns: 185px 1fr;
-		gap: 140px;
+		display: flex;
+		gap: 50px;
+		align-items: center;
+		justify-content: space-between;
 		padding-top: 48px;
 		border-top: 1px solid var(--secondary);
 
 		@include md {
 			display: flex;
-			flex-direction: column;
-			gap: 48px;
-		}
-
-		@include sm {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 36px 0;
-			padding-top: 36px;
-		}
-
-		@include xs {
-			gap: 24px 0;
-			padding-top: 24px;
+			padding: 24px 0;
+			border: none;
 		}
 	}
 
@@ -63,18 +43,70 @@
 		}
 	}
 
-	&__menu {
+	&__message {
+		max-width: 405px;
+		font-size: 14px;
+		line-height: 1.5;
+
+		@include md {
+			display: none;
+		}
+	}
+
+	&__wrapper-contacts {
+		display: none;
+
+		@include md {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		a {
+			font-size: 18px;
+			@include ui-link(var(--fc-dark));
+
+			@include xs {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__links {
 		display: flex;
 		gap: 30px;
 		justify-content: space-between;
+		margin-top: 48px;
+		padding: 26px 0;
+		border-top: 1px solid var(--secondary);
+
+		@include lg {
+			flex-wrap: wrap;
+		}
+
+		@include md {
+			order: -1;
+			margin-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+
+		@include md {
+			justify-content: space-between;
+			width: 100%;
+		}
 
 		@include sm {
-			grid-row: 1/2;
-			grid-column: span 2;
+			flex-wrap: wrap;
 		}
 
 		@include xs {
-			align-items: center;
+			gap: 15px;
 		}
 
 		.menu-item {
@@ -115,17 +147,23 @@
 	}
 
 	&__contacts {
-		display: none;
-		flex-direction: column;
-		gap: 10px;
-		align-self: center;
+		display: flex;
+		gap: 100px;
+		align-items: center;
 
-		@include sm {
-			display: flex;
+		@include lg {
+			gap: 30px;
+		}
+
+		@include md {
+			display: none;
 		}
 
 		a {
-			text-align: right;
+			color: var(--primary);
+			font-weight: 500;
+			font-size: 14px;
+			text-transform: uppercase;
 			text-decoration: none;
 
 			@include xs {
@@ -134,7 +172,7 @@
 		}
 	}
 
-	&__links {
+	&__bottom {
 		display: flex;
 		gap: 14px 28px;
 		justify-content: space-between;

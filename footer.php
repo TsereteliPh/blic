@@ -1,26 +1,21 @@
 </main>
-
+<?php
+	$tel = get_field( 'phone', 'options' );
+	$telFormatted = preg_replace( '/[^0-9,+]/', '', $tel );
+	$email = get_field( 'email', 'options' );
+	$message = get_field( 'footer_message', 'options' );
+?>
 <footer class="footer">
 	<div class="container footer__container">
 		<div class="footer__wrapper">
 			<a href="<?php echo bloginfo( 'url' ); ?>" class="footer__logo" aria-label="Blic staffing logo"></a>
 
-			<?php
-				wp_nav_menu(array(
-					'theme_location' => 'menu_footer',
-					'container' => '',
-					'menu_id' => 'menu-footer',
-					'menu_class' => 'reset-list footer__menu'
-				));
+			<?php if ( $message ) : ?>
+				<div class="footer__message"><?php echo $message; ?></div>
+			<?php endif; ?>
 
-				$tel = get_field( 'phone', 'options' );
-				$telFormatted = preg_replace( '/[^0-9,+]/', '', $tel );
-				$email = get_field( 'email', 'options' );
-
-				if ( $tel || $email ) :
-			?>
-
-				<div class="footer__contacts">
+			<?php if ( $tel || $email ) : ?>
+				<div class="footer__wrapper-contacts">
 					<?php if ( $tel ) : ?>
 						<a href="tel:<?php echo $telFormatted; ?>" class="footer__phone"><?php echo $tel; ?></a>
 					<?php endif; ?>
@@ -33,6 +28,27 @@
 		</div>
 
 		<div class="footer__links">
+			<?php wp_nav_menu(array(
+				'theme_location' => 'menu_footer',
+				'container' => '',
+				'menu_id' => 'menu-footer',
+				'menu_class' => 'reset-list footer__menu'
+			)); ?>
+
+			<?php if ( $tel || $email ) : ?>
+				<div class="footer__contacts">
+					<?php if ( $tel ) : ?>
+						<a href="tel:<?php echo $telFormatted; ?>" class="footer__phone"><?php echo $tel; ?></a>
+					<?php endif; ?>
+
+					<?php if ( $email ) : ?>
+						<a href="mailto:<?php echo $email; ?>" class="footer__email"><?php echo $email; ?></a>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+		</div>
+
+		<div class="footer__bottom">
 			<div class="footer__copyright">© 2023 BLIC STAFFING Renewable Energy. All rights reserved</div>
 
 			<a href="<?php echo get_page_link( 66 ); ?>" class="footer__terms">Terms&nbsp;of&nbsp;use</a>

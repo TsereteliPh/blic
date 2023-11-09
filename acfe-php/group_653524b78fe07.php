@@ -48,6 +48,28 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'acfe_field_group_condition' => 0,
 		),
+		array(
+			'key' => 'field_654d32ac080bd',
+			'label' => 'Текст в подвале сайта',
+			'name' => 'footer_message',
+			'aria-label' => '',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 'We aim to connect specialists with pioneers in the renewable energy industry and facilitate a shift towards a greener future',
+			'acfe_textarea_code' => 0,
+			'maxlength' => '',
+			'rows' => 3,
+			'placeholder' => '',
+			'new_lines' => '',
+			'acfe_field_group_condition' => 0,
+		),
 	),
 	'location' => array(
 		array(
@@ -74,7 +96,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1697981722,
+	'modified' => 1699558101,
 ));
 
 endif;
