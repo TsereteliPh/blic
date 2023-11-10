@@ -15,6 +15,7 @@ if (have_rows('blocks', $id)) {
 
 		if (get_row_layout() == 'about') get_template_part('layouts/blocks/about/template');
 		else if (get_row_layout() == 'accordion') get_template_part('layouts/blocks/accordion/template');
+		else if (get_row_layout() == 'contact-details') get_template_part('layouts/blocks/contact-details/template');
 		else if (get_row_layout() == 'contact-us') get_template_part('layouts/blocks/contact-us/template');
 		else if (get_row_layout() == 'image-link') get_template_part('layouts/blocks/image-link/template');
 		else if (get_row_layout() == 'image-text') get_template_part('layouts/blocks/image-text/template');

@@ -7,6 +7,27 @@ acf_add_local_field_group(array(
 	'title' => 'Настройки темы',
 	'fields' => array(
 		array(
+			'key' => 'field_654e70e253afc',
+			'label' => 'Адрес',
+			'name' => 'address',
+			'aria-label' => '',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'acfe_field_group_condition' => 0,
+		),
+		array(
 			'key' => 'field_653524b7e91b2',
 			'label' => 'Телефон для связи',
 			'name' => 'phone',
@@ -96,7 +117,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1699558101,
+	'modified' => 1699639562,
 ));
 
 endif;
