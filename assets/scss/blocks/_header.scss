@@ -8,7 +8,7 @@
 	padding-top: 25px;
 	transition: var(--transition);
 
-	&--index {
+	&--colored {
 
 		.header__logo {
 			background-image: url(assets/images/logo-main.png);
@@ -61,6 +61,10 @@
 		align-items: center;
 		margin-left: auto;
 
+		@include md {
+			gap: 30px;
+		}
+
 		@include sm {
 			display: none;
 		}
@@ -84,7 +88,7 @@
 				}
 
 				&:active {
-					color: var(--secondary);
+					opacity: 0.6;
 				}
 			}
 		}
@@ -98,12 +102,16 @@
 	}
 
 	&__language {
-		margin-left: 120px;
+		margin-left: 80px;
 		color: var(--fc-light);
 		text-transform: uppercase;
 		background: transparent;
 		border: none;
 		transition: var(--transition);
+
+		@include md {
+			margin-left: 15px;
+		}
 
 		@include sm {
 			margin-left: auto;
