@@ -1,0 +1,15 @@
+.map {
+	margin-top: 95px;
+
+	@include md {
+		margin-top: 75px;
+	}
+
+	@include xs {
+		margin-top: 60px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+}

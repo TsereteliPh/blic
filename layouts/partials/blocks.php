@@ -23,6 +23,7 @@ if (have_rows('blocks', $id)) {
 		else if (get_row_layout() == 'jobs') get_template_part('layouts/blocks/jobs/template');
 		else if (get_row_layout() == 'list-of-items') get_template_part('layouts/blocks/list-of-items/template');
 		else if (get_row_layout() == 'main-text') get_template_part('layouts/blocks/main-text/template');
+		else if (get_row_layout() == 'map') get_template_part('layouts/blocks/map/template');
 		else if (get_row_layout() == 'services-links') get_template_part('layouts/blocks/services-links/template');
 		else if (get_row_layout() == 'staffing-map') get_template_part('layouts/blocks/staffing-map/template');
 	}
