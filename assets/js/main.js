@@ -40,46 +40,37 @@ function setHeaderScrollClass() {
 }
 
 function setTelMask() {
-	[].forEach.call(document.querySelectorAll('[type="tel"]'), function (input) {
-		let keyCode;
+	const phoneInputs = document.querySelectorAll("input[type='tel']");
 
-		function mask(event) {
-			event.keyCode && (keyCode = event.keyCode);
-			let pos = this.selectionStart;
-			if (pos < 3) event.preventDefault();
-			let matrix = "+7 (___) ___-__-__",
-				i = 0,
-				def = matrix.replace(/\D/g, ""),
-				val = this.value.replace(/\D/g, ""),
-				new_value = matrix.replace(/[_\d]/g, function (a) {
-					return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-				});
-			i = new_value.indexOf("_");
-			if (i != -1) {
-				i < 5 && (i = 3);
-				new_value = new_value.slice(0, i);
+	phoneInputs.forEach(input => {
+		input.addEventListener("keydown", function (e) {
+			input.value = phoneNumberFormatter(input.value);
+		})
+
+		input.addEventListener("focus", function (e) {
+            if (!input.value) {
+				input.value = '+';
 			}
-			let reg = matrix
-				.substr(0, this.value.length)
-				.replace(/_+/g, function (a) {
-					return "\\d{1," + a.length + "}";
-				})
-				.replace(/[+()]/g, "\\$&");
-			reg = new RegExp("^" + reg + "$");
-			if (
-				!reg.test(this.value) ||
-				this.value.length < 5 ||
-				(keyCode > 47 && keyCode < 58)
-			)
-				this.value = new_value;
-			if (event.type == "blur" && this.value.length < 5) this.value = "";
+        })
+
+		input.addEventListener("blur", function (e) {
+            if (input.value === '+') {
+                input.value = '';
+            }
+        })
+	});
+
+	function phoneNumberFormatter(value) {
+		if (!value) return value;
+
+		const phoneNumber = value.replace(/[^\d]/g, '');
+		if (phoneNumber.length < 4) return '+' + phoneNumber;
+		if (phoneNumber.length < 7) {
+			return `+${phoneNumber.slice(0, 3)} ${phoneNumber.slice(3)}`;
 		}
 
-		input.addEventListener("input", mask, false);
-		input.addEventListener("focus", mask, false);
-		input.addEventListener("blur", mask, false);
-		input.addEventListener("keydown", mask, false);
-	});
+		return `+${phoneNumber.slice(0, 3)} ${phoneNumber.slice(3, 6)} ${phoneNumber.slice(6)}`;
+	}
 }
 
 function sendForm() {
@@ -87,6 +78,7 @@ function sendForm() {
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
 			const form = this;
+			this.classList.add("loader");
 			let formData = new FormData(form);
 			const formName = form.name;
 			const fileInput = form.querySelector("input[type=file]");
@@ -105,12 +97,13 @@ function sendForm() {
 				});
 			}
 
-			const response = fetch(adem_ajax.url, {
+			const response = fetch(tsereteli_ajax.url, {
 				method: "POST",
 				body: formData,
 			})
 				.then((response) => response.text())
 				.then((data) => {
+					this.classList.remove("loader");
 					Fancybox.close(true);
 					form.reset();
 					setTimeout(function () {
@@ -195,7 +188,7 @@ function showMorePosts() {
 		const container = document.querySelector(".js-show-more-container");
 		this.textContent = "Загрузка...";
 
-		const response = fetch(adem_ajax.url, {
+		const response = fetch(tsereteli_ajax.url, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
@@ -320,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 let accordion = document.querySelector('.accordion');
 
-if (accordion.classList.contains('accordion--full-size') && window.innerWidth >= 992) {
+if (accordion && accordion.classList.contains('accordion--full-size') && window.innerWidth >= 992) {
 	accordion = false;
 }
 
@@ -343,6 +336,20 @@ if (accordion) {
 				this.classList.add('active');
 				slideToggle(this.nextElementSibling);
 			}
+		})
+	});
+}
+
+//Функционал отклика на вакансию
+
+const jobBtns = document.querySelectorAll('.jobs__modal');
+
+if (jobBtns) {
+	jobBtns.forEach(btn => {
+		btn.addEventListener('click', function() {
+			const modal = document.querySelector(this.dataset.src);
+			let modalInput = modal.querySelector('input[name=client_position]');
+			modalInput.value = this.dataset.position;
 		})
 	});
 }

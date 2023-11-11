@@ -118,13 +118,17 @@ add_action("wp_ajax_nopriv_send_mail", "send_mail");
 function send_mail()
 {
 	if (empty($_POST['form_name']) || empty($_POST['page_request'])) exit;
+	if ( $_POST['form_name'] == 'Feedback' && !wp_verify_nonce( $_POST['contact-us_input'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'JobApplication' && !wp_verify_nonce( $_POST['application_input'], $_POST['form_name'] ) ) exit;
 
 	$form_name = $_POST['form_name'];
 	$mail = '';
-	$mail = isset($_POST['client_name']) ? "Имя: " . strip_tags($_POST['client_name']) . "<br/>" : '';
-	$mail .= isset($_POST['client_tel']) ? "Телефон: <a href='tel:" . strip_tags($_POST['client_tel']) . "'>" . strip_tags($_POST['client_tel']) . "</a><br/>" : '';
+	$mail = isset($_POST['client_name']) ? "Name: " . strip_tags($_POST['client_name']) . "<br/>" : '';
+	$mail .= isset($_POST['client_tel']) ? "Phone: <a href='tel:" . strip_tags($_POST['client_tel']) . "'>" . strip_tags($_POST['client_tel']) . "</a><br/>" : '';
 	$mail .= isset($_POST['client_email']) ? "Email: <a href='mailto:" . strip_tags($_POST['client_email']) . "'>" . strip_tags($_POST['client_email']) . "</a><br/>" : '';
-	$mail .= isset($_POST['client_message']) ? "Сообщение: " . strip_tags($_POST['client_message']) . "<br/>" : '';
+	$mail .= isset($_POST['client_position']) ? "Job position: " . strip_tags($_POST['client_position']) . "<br/>" : '';
+	$mail .= isset($_POST['client_location']) ? "Location: " . strip_tags($_POST['client_location']) . "<br/>" : '';
+	$mail .= isset($_POST['client_message']) ? "Message: " . strip_tags($_POST['client_message']) . "<br/>" : '';
 	$mail .= "Страница: $_POST[page_request] <br/>";
 
 	require_once ABSPATH . 'wp-admin/includes/image.php';

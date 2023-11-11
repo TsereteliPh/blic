@@ -7,7 +7,12 @@
 	background: none;
 	border: none;
 	border-bottom: 1px solid var(--secondary);
+	outline: none !important;
 	transition: var(--transition);
+
+	@include xs {
+		font-size: 14px;
+	}
 
 	&:hover,
 	&:focus {
@@ -49,6 +54,7 @@
 	&__switcher {
 		position: relative;
 		display: block;
+		flex-shrink: 0;
 		width: 24px;
 		height: 24px;
 		border: 1px solid var(--secondary);
@@ -68,6 +74,13 @@
 			opacity: 0;
 			transition: var(--transition);
 			content: "";
+		}
+	}
+
+	&__text {
+
+		@include xs {
+			font-size: 8px;
 		}
 	}
 

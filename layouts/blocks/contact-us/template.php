@@ -24,18 +24,18 @@
 
 			<input type="text" class="hidden" name="page_request" value="<?php echo $pageTitle; ?>">
 
-			<input class="input contact-us__input" type="text" name="client_name" placeholder="Full Name" required>
+			<input class="input contact-us__input" type="text" name="client_name" placeholder="Full Name"  autocompete="name" required>
 
-			<input class="input contact-us__input" type="email" name="client_email" placeholder="Email address" required>
+			<input class="input contact-us__input" type="email" name="client_email" placeholder="Email address" autocompete="email" required>
 
-			<input class="input contact-us__input" type="tel" name="client_tel" placeholder="Phone number" required>
+			<input class="input contact-us__input" type="tel" name="client_tel" placeholder="Phone number" autocompete="off" required>
 
 			<textarea class="input contact-us__textarea" placeholder="Your enquiry"></textarea>
 
 			<label class="policy-check contact-us__policy">
 				<input type="checkbox" name="policy" class="policy-check__input" required checked>
 				<span class="policy-check__switcher"></span>
-				<span>I confirm that I have read and agreed with <a href="<?php get_page_link( 66 ); ?>">Terms of Use</a> and <a href="<?php echo get_privacy_policy_url(); ?>">Privacy Policy</a></span>
+				<span class="policy-check__text">I confirm that I have read and agreed with <a href="<?php get_page_link( 66 ); ?>">Terms of Use</a> and <a href="<?php echo get_privacy_policy_url(); ?>">Privacy Policy</a></span>
 			</label>
 
 			<button class="btn contact-us__submit" type="submit">

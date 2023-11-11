@@ -51,7 +51,7 @@
 							</div>
 						<?php endif; ?>
 
-						<button class="btn jobs__modal" data-fancybox data-src="#application">
+						<button class="btn jobs__modal" data-fancybox data-src="#application" data-position="<?php echo $vacation['label']; ?>">
 							Apply now
 							<svg width="17" height="17"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
 						</button>
