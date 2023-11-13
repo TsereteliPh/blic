@@ -34,7 +34,7 @@
 		<label class="policy-check modal__policy">
 			<input type="checkbox" name="policy" class="policy-check__input" required checked>
 			<span class="policy-check__switcher"></span>
-			<span class="policy-check__text">I confirm that I have read and agreed with <a href="<?php get_page_link( 66 ); ?>">Terms of Use</a> and <a href="<?php echo get_privacy_policy_url(); ?>">Privacy Policy</a></span>
+			<span class="policy-check__text">I confirm that I have read and agreed with <a href="<?php get_page_link( 66 ); ?>">Terms & Conditions</a> and <a href="<?php echo get_privacy_policy_url(); ?>">Privacy Policy</a></span>
 		</label>
 
 		<button class="btn modal__submit" type="submit">
