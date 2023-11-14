@@ -143,5 +143,8 @@ iframe {
 }
 
 .main {
-	margin: 40px 0 auto;
+
+	&--indent {
+		margin: 75px 0 auto;
+	}
 }

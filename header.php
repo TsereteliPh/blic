@@ -65,5 +65,5 @@
 	</div>
 </header>
 
-<main class="main<?php echo ( is_front_page() ) ? ' main--index' : ''; ?>">
+<main class="main<?php echo ( is_privacy_policy() || is_page( 66 ) || is_page( 267 ) ) ? ' main--indent' : ''; ?>">
 	<?php get_template_part( 'layouts/partials/welcome' ); ?>
