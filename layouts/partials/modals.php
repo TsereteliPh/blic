@@ -43,3 +43,12 @@
 		</button>
 	</form>
 </div>
+
+<div class="modal modal--cookies">
+	<div class="modal__alert">We are using cookies to give you the best experience on our website. You can find out more about which cookies we are using on the <a href="<?php echo get_page_link( 267 ); ?>" target="_blank">following page</a></div>
+
+	<button class="btn modal__apply" type="button">
+		Accept & close
+		<svg width="17" height="17"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-arrow"></use></svg>
+	</button>
+</div>

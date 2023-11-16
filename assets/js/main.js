@@ -353,3 +353,22 @@ if (jobBtns) {
 		})
 	});
 }
+
+//Cookie modal
+const modalCookies = document.querySelector('.modal--cookies');
+
+if (sessionStorage.getItem('modal')) modalCookies.classList.add('applied');
+
+if (modalCookies && !sessionStorage.getItem('modal')) {
+	setTimeout(() => {
+		modalCookies.classList.add('show');
+	}, 2000);
+
+	const applyBtn = modalCookies.querySelector('.modal__apply');
+
+	applyBtn.addEventListener('click', function() {
+		modalCookies.classList.remove('show');
+		modalCookies.classList.add('applied');
+		sessionStorage.setItem('modal', 1);
+	})
+}
