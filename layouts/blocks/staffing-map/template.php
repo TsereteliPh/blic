@@ -62,9 +62,9 @@
 					<div class="staffing-map__planned-wrapper">
 						<?php foreach ( $planned as $item ) : ?>
 							<div class="staffing-map__planned-interval">
-								<div class="staffing-map__number"><?php echo $item['database']; ?></div>
+								<div class="staffing-map__number">&#215;<?php echo $item['database']; ?></div>
 
-								<time class="staffing-map__date" datetime="<?php echo $item['date']; ?>">by <?php echo date( 'F Y', strtotime($item['date']) ); ?></time>
+								<div class="staffing-map__date"><?php echo $item['time']; ?></div>
 							</div>
 						<?php endforeach; ?>
 					</div>
