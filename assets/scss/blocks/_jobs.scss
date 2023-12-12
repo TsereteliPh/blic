@@ -102,6 +102,21 @@
 	}
 
 	&__modal {
-		margin-top: 6px;
+		margin-top: 12px;
+		font-size: 20px;
+
+		@include sm {
+			margin-top: 6px;
+			font-size: 16px;
+		}
+
+		svg {
+			width: 20px;
+			height: auto;
+
+			@include sm {
+				width: 17px;
+			}
+		}
 	}
 }
